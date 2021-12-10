@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.option-cont{
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: #f1f2f6;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+img{
+    display: block;
+}
+
+.tools-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 5rem;
+    width: 65vw;
+    justify-content: space-around;
+    position: absolute;
+    top: 1.5rem;
+    left: 20vw;
+}
+
+.scale-tools{
+    animation-name: scale-tools;
+    animation-duration: 1s;
+}
+
+@keyframes scale-tools{
+    0%{
+        transform: scale(0.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+.tools-cont > * {
+    display: block;
+    height: 2.8rem;
+    width: 2.8rem;
+    cursor: pointer;
+}
+
+/* for pencil  */
+.pencil-tool{
+    border-radius: 3px;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 5rem;
+    width: 9vw;
+    position: absolute;
+    top: 6.5rem;
+    left: 20vw;
+    display: none;
+}
+
+.pencil-width-cont{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pencil-width-cont  input{
+    width: 80%;
+}
+
+.pencil-color-cont{
+    height: calc(100% - 2rem);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pencil-color{
+    width: 2vw;
+    height: 1.7rem;
+    border-radius: 50%;
+}
+
+/* .pencil-color  */
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+
+/* for eraser  */
+.erase-tool{
+    height: 2rem;
+    width: 9vw;
+    background-color: #f1f2f6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 6.5rem;
+    left: 29.5vw;
+}
+
+.erase-tool input{
+    width: 80%;
+}
+
+.sticky-cont{
+    height: 15rem;
+    width: 15rem;
+    position: absolute;
+    top: 19rem;
+    left: 4rem;
+}
+
+.header-cont{
+    background-color: #f1f2f6;
+    height: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-cont > * {
+    margin-right: 0.5rem;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+}
+
+.minimize{
+    background-color: #4cd137;
+}
+
+.remove{
+    background-color: #EA2027;
+}
+
+.note-cont{
+    height: calc(100% - 2rem);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+textarea{
+    outline: none;
+    border: none;
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}

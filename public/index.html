@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="style.css">
+    <title>OpenBoard</title>
+</head>
+<body>
+    <div class="option-cont">
+        <i class="fas fa-bars"></i>
+    </div>
+    <div class="tools-cont scale-tools">
+        <img class="pencil" src="icons/Pencil.svg">
+        <img class="eraser" src="icons/Eraser.svg">
+        <img class="download" src="icons/Download.svg">
+        <img class="upload" src="icons/Upload.svg">
+        <img class="sticky-note" src="icons/StickyNote.svg">
+        <img class="undo" src="icons/Undo.svg">
+        <img class="redo" src="icons/Redo.svg">        
+    </div>
+
+    <div class="pencil-tool">
+        <div class="pencil-width-cont">
+            <input type="range" min="2" max="10" value="3" class="pencil-width"> 
+        </div>
+        <div class="pencil-color-cont">
+            <div class="black pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="blue pencil-color"></div>
+
+        </div>
+    </div>
+    <div class="erase-tool">
+        <input type="range" min="2" max="10" value="3" class="erase-width">
+    </div>
+
+    <canvas></canvas>
+    <script src="https://cdn.socket.io/4.4.0/socket.io.min.js" integrity="sha384-1fOn6VtTq3PWwfsOrk45LnYcGosJwzMHv+Xh/Jx5303FVOXzEnw0EpLv30mtjmlj" crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect("http://localhost:5000");
+    </script>
+    <script src="script.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
